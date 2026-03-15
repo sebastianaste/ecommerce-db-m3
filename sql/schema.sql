@@ -51,7 +51,7 @@ CREATE TABLE payment (
     payment_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL UNIQUE,
     amount DECIMAL(9,2) NOT NULL CHECK (amount > 0),
-    method VARCHAR(20) NOT NULL CHECK (method IN ('debit','credit')),
+    method VARCHAR(20) NOT NULL CHECK (method IN ('debit','credit','paypal')),
     payment_status VARCHAR(20) NOT NULL CHECK (payment_status IN ('pending', 'completed', 'failed', 'refunded')),
     paid_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
