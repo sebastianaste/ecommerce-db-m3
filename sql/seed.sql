@@ -64,17 +64,18 @@ INSERT INTO order_details (order_id, product_id, quantity, unit_price) VALUES
 (2, 8, 1, 40000.00),
 (3, 7, 2, 40000.00),
 (4, 11, 1, 40000.00),
-(4, 12, 1, 40000.00),
+(4, 7, 1, 40000.00),
 (4, 4, 1, 35000.00),
 (4, 2, 1, 15000.00),
 (5, 9, 3, 40000.00),
 (6, 6, 1, 40000.00),
 (6, 2, 1, 15000.00),
-(6, 1, 1, 15000.00),
+(6, 1, 1, 15000.00), 
 (7, 3, 1, 45000.00),
-(8, 12, 1, 40000.00),
+(8, 1, 1, 15000.00),
 (9, 10, 1, 40000.00),
 (10, 4, 10, 35000.00);
+-- no product id n12 being sold (for testing payment)
 
 INSERT INTO payment (order_id, amount, method, payment_status, paid_at) VALUES
 (1, 55000.00, 'credit', 'completed', '2025-01-10 10:05:00'),
@@ -84,6 +85,6 @@ INSERT INTO payment (order_id, amount, method, payment_status, paid_at) VALUES
 (5, 120000.00, 'debit', 'completed', '2026-03-05 16:05:00'),
 (6, 70000.00, 'credit', 'completed', '2026-03-10 10:05:00'),
 (7, 45000.00, 'debit', 'completed', '2026-03-20 12:05:00'),
-(8, 40000.00, 'credit', 'completed', '2026-03-01 08:05:00'),
+(8, 15000.00, 'credit', 'completed', '2026-03-01 08:05:00'),
 (9, 40000.00, 'debit', 'refunded', '2026-03-10 15:05:00'),
 (10, 350000.00, 'credit', 'pending', NULL)

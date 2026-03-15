@@ -16,7 +16,7 @@ CREATE TABLE orders (
 CREATE TABLE categories (
     category_id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(100) NOT NULL UNIQUE,
-    category_description VARCHAR(1000)
+    category_description TEXT
 );
 
 CREATE TABLE products (
@@ -56,3 +56,10 @@ CREATE TABLE payment (
     paid_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
+
+CREATE INDEX idx_customer ON customers (customer_id);
+CREATE INDEX idx_order ON order_details (product_id, quantity);
+CREATE INDEX idx_product_info ON products (product_id, unit_price, product_name);
+CREATE INDEX idx_inventory_amount ON inventory (quantity, last_update);
+CREATE INDEX idx_category ON categories (category_id, category_name);
+
