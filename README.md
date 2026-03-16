@@ -1,4 +1,4 @@
-# e-commerce-bootcamp
+# ecommerce-db-m3
 Bootcamp project, contains an ER design, with different diagrams and queries to analyze/seed the designed ecommerce.
 
 ## setup
@@ -8,4 +8,4 @@ Bootcamp project, contains an ER design, with different diagrams and queries to 
 4. run sql/seed.sql
 5. run the queries you want to try on sql/queries.sql
 
-[Repository link.](https://github.com/sebastianaste/e-commerce-bootcamp)
+[Repository link.](https://github.com/sebastianaste/ecommerce-db-m3)
