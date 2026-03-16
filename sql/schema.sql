@@ -8,7 +8,7 @@ CREATE TABLE orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
-    total_price DECIMAL(9,2) NOT NULL CHECK (total_price > 0),
+    total_price DECIMAL(9,2) NOT NULL CHECK (total_price >= 0),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
